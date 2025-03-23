@@ -1,0 +1,87 @@
+/*mobile first view*/
+header {
+    background-color: #2c3e50;
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+    float: left;
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#hamburger_checkbox {
+    display: none;
+}
+
+#hamburger_image {
+    background-color: white;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 10%;
+}
+
+#hamburger_checkbox:not(:checked)+nav {
+    display: none;
+}
+
+nav a {
+    color: white;
+    float: left;
+    font-size: 17px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+/*invert colors on mouse hover*/
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+/*invert colors on tab key focus*/
+nav a:focus {
+    background-color: white;
+    color: black;
+    outline: none;
+}
+
+/*highlight the current link*/
+.active_nav {
+    background-color: #2a6592;
+    color: white;
+}
+
+/*medium devices {landscape, 765px and up} */
+@media only screen and (min-width: 768px) {
+
+    /* hide the hamburger menu */
+    #hamburger_image {
+        display: none;
+    }
+
+    /*show the nav links*/
+    #hamburger_checkbox:not(:checked)+nav {
+        display: block;
+    }
+
+    h1 {
+        text-align: left;
+        width: 390px;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav a {
+        width: auto;
+    }
+}
